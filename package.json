@@ -1,0 +1,38 @@
+{
+  "name": "lections",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export --wait 10000"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.49.24",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.4.33"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-slidev": "^1.0.5"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": [
+          "slides.md",
+          "pages/*.md",
+          "slides/lection_*/slides.md"
+        ],
+        "options": {
+          "parser": "slidev",
+          "plugins": [
+            "prettier-plugin-slidev"
+          ],
+          "max_line_length": 80
+        }
+      }
+    ]
+  }
+}
